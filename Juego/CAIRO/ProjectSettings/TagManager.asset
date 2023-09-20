@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: fondo
+    uniqueID: 1649008889
+    locked: 0
+  - name: jugador
+    uniqueID: 3817940537
+    locked: 0
+  - name: enemigo
+    uniqueID: 3127353493
+    locked: 0
+  - name: plataforma
+    uniqueID: 1959440829
+    locked: 0
