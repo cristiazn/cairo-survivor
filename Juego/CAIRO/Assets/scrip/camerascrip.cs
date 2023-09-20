@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camerascrip : MonoBehaviour
+public class camerascrip : MonoBehaviour
 {
     public GameObject maximus;
         
