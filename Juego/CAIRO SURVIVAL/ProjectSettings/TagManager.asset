@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - enemy
+  - maximus
   layers:
   - Default
   - TransparentFX
@@ -40,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: fondo
+    uniqueID: 870972857
+    locked: 0
+  - name: jugador
+    uniqueID: 467504775
+    locked: 0
+  - name: enemigos
+    uniqueID: 1823662285
+    locked: 0
+  - name: plataforma
+    uniqueID: 3571819505
     locked: 0
