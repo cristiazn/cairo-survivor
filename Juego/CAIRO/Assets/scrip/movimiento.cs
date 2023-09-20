@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class movimiento : MonoBehaviour
-{   
+{
+    [Header("Barras")]
+    [SerializeField] private Slider barraVida;
     public float Speed;
     public float JumpForce;
      private Rigidbody2D Rigidbody2D;
@@ -18,6 +21,11 @@ public class movimiento : MonoBehaviour
     }
     void Update()
     {
+        if(barraVida.value == 0)
+        {
+            Destroy(gameObject);
+        }
+       
          Horizontal = Input.GetAxisRaw("Horizontal");
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-10.0f, 10.0f, 10.0f);
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(10.0f, 10.0f, 10.0f);
@@ -44,7 +52,17 @@ public class movimiento : MonoBehaviour
     private void FixedUpdate()
     {
         Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
-    } 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Piso")
+        {
+            barraVida.value -= 0.1f;
+        }
+
+
+    }
+
 
 
 }
