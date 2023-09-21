@@ -381,6 +381,7 @@
 "Assets/scrip/enemigo.cs"
 "Assets/scrip/GruntScrip.cs"
 "Assets/scrip/hit.cs"
+"Assets/scrip/menuPause.cs"
 "Assets/scrip/movimiento.cs"
 "Assets/scrip/Rangovison.cs"
 -langversion:9.0
