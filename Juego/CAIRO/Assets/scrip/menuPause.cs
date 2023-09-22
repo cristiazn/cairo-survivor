@@ -53,6 +53,9 @@ public class menuPause : MonoBehaviour
     {
         if(Jugador == null)
         {
+            UIPause.SetActive(false);
+            btnPause.SetActive(false);
+            barraVida.SetActive(false);
             UIMuerte.SetActive(true);
         }
     }

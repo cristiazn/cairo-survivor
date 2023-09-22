@@ -34,7 +34,7 @@ public class enemigo : MonoBehaviour
             cronometro += 1 * Time.deltaTime;
             if (cronometro >= 4)
             {
-                direccion = Random.Range(0, 2);
+                direccion  = Random.Range(0, 2);
                 cronometro = 0;
             }
             switch (rutina)

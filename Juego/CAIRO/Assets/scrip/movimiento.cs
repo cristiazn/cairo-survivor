@@ -7,12 +7,23 @@ public class movimiento : MonoBehaviour
 {
     [Header("Barras")]
     [SerializeField] private Slider barraVida;
+
+    [Header("Rebote")]
+    public float velocidadRebote;
+
+    [Header("Movimiento")]
     public float Speed;
     public float JumpForce;
+    public LayerMask queEsSuelo;
+    public Transform controladorSuelo;
+    public Vector3 dimensionesCaja;
+    public bool enSuelo;
+    private bool salto = false;
      private Rigidbody2D Rigidbody2D;
      private float Horizontal;
      private bool Grounded;
      private Animator Animator;
+    
 
    void  Start() 
     {
@@ -31,27 +42,35 @@ public class movimiento : MonoBehaviour
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(10.0f, 10.0f, 10.0f);
 
          Animator.SetBool("running", Horizontal !=0.0f);
-          Debug.DrawRay(transform.position, Vector3.down * 1.1f, Color.red);
-        if (Physics2D.Raycast(transform.position, Vector3.down, 1.1f))
-        {
-            Grounded = true;
-        }
-        else Grounded = false;  
-
-         if (Input.GetKeyDown(KeyCode.W) && Grounded)
-         {
-             Jump();
-         }
-         }
          
-         private void Jump()
+         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
          {
-            Rigidbody2D.AddForce(Vector2.up * JumpForce);
+            salto = true;
          }
+     }
+
     
     private void FixedUpdate()
     {
         Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
+        enSuelo = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, queEsSuelo);
+
+        Jump(salto);
+        salto = false;
+    }
+    public void Jump(bool saltar)
+    {
+        if(enSuelo && saltar)
+
+        {
+            enSuelo = false;
+            Rigidbody2D.AddForce(new Vector2(0f, JumpForce));
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(controladorSuelo.position, dimensionesCaja);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -59,8 +78,19 @@ public class movimiento : MonoBehaviour
         {
             barraVida.value -= 0.1f;
         }
+        if (collision.gameObject.tag == "Caida")
+        {
+            barraVida.value -= 1f;
+        }
+    }
 
-
+    public void DañoVida(float daño)
+    {
+        barraVida.value -= daño;
+    }
+    public void Rebote()
+    {
+        Rigidbody2D.velocity = new Vector2(Rigidbody2D.velocity.x, velocidadRebote);
     }
 
 

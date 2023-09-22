@@ -377,12 +377,18 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Daño.cs"
+"Assets/MovimientoPlataforma.cs"
+"Assets/Rebote.cs"
 "Assets/scrip/camerascrip.cs"
 "Assets/scrip/enemigo.cs"
+"Assets/scrip/Enemigo2D.cs"
 "Assets/scrip/GruntScrip.cs"
 "Assets/scrip/hit.cs"
+"Assets/scrip/HitEnemigo2D.cs"
 "Assets/scrip/menuPause.cs"
 "Assets/scrip/movimiento.cs"
+"Assets/scrip/RangoEnemigo2D.cs"
 "Assets/scrip/Rangovison.cs"
 -langversion:9.0
 
