@@ -7,6 +7,7 @@ public class Enemigo2D : MonoBehaviour
 {
 
     public int rutina;
+    public float vida = 2;
     public float cronometro;
     public Animator ani;
     public int direccion;
@@ -33,6 +34,10 @@ public class Enemigo2D : MonoBehaviour
     private void Update()
     {
         Comportamientos();
+        if(vida == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void Comportamientos()
@@ -144,7 +149,17 @@ public class Enemigo2D : MonoBehaviour
     {
         Hit.GetComponent<BoxCollider2D>().enabled = false;
     }
-
+    public void DañoVida(float daño)
+    {
+        vida -= daño;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Piso")
+        {
+            Destroy(gameObject);
+        }
+    }
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

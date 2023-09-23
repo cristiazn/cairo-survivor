@@ -7,6 +7,8 @@ TagManager:
   - Piso
   - Caida
   - maximus
+  - Bandera
+  - Enemigos
   layers:
   - Default
   - TransparentFX
