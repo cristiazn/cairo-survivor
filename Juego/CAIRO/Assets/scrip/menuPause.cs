@@ -59,10 +59,11 @@ public class menuPause : MonoBehaviour
             UIMuerte.SetActive(true);
         }
     }
-    public void Quitar()
+
+    public void Nivel()
     {
-        Debug.Log("Saliendo");
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
+    
 
 }

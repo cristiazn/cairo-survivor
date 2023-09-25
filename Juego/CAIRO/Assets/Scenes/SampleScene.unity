@@ -3455,7 +3455,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1998000461}
         m_TargetAssemblyTypeName: menuPause, Assembly-CSharp
-        m_MethodName: Quitar
+        m_MethodName: Nivel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3795,7 +3795,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1998000461}
         m_TargetAssemblyTypeName: menuPause, Assembly-CSharp
-        m_MethodName: Quitar
+        m_MethodName: Nivel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4856,7 +4856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231085926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.15, y: -1.4540325, z: 0}
+  m_LocalPosition: {x: -9.15, y: -1.33, z: 0}
   m_LocalScale: {x: 8.927091, y: 8.927091, z: 8.927091}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9083,7 +9083,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1998000461}
         m_TargetAssemblyTypeName: menuPause, Assembly-CSharp
-        m_MethodName: Quitar
+        m_MethodName: Nivel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

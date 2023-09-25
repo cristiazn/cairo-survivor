@@ -16,11 +16,11 @@ public class Rebote : MonoBehaviour
          {
             foreach(ContactPoint2D punto in other.contacts)
             {
-                if(punto.normal.y <= -0.9)
+                if (punto.normal.y <= -0.9)
                 {
                     other.gameObject.GetComponent<movimiento>().Rebote();
                     vida += 1;
-                    if (vida == 3)
+                    if (vida == 5)
                     {
                         Destroy(gameObject);
                     }

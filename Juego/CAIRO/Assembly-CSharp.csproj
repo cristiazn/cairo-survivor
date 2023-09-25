@@ -71,6 +71,7 @@
     <Compile Include="Assets\scrip\Enemigo2D.cs" />
     <Compile Include="Assets\Rebote.cs" />
     <Compile Include="Assets\scrip\enemigo.cs" />
+    <Compile Include="Assets\cambiarEscena.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
