@@ -59,6 +59,7 @@
     <Compile Include="Assets\MovimientoPlataforma.cs" />
     <Compile Include="Assets\scrip\Rangovison.cs" />
     <Compile Include="Assets\scrip\menuPause.cs" />
+    <Compile Include="Assets\HitJugador.cs" />
     <Compile Include="Assets\Daño.cs" />
     <Compile Include="Assets\scrip\HitEnemigo2D.cs" />
     <Compile Include="Assets\scrip\movimiento.cs" />
@@ -66,11 +67,10 @@
     <Compile Include="Assets\scrip\hit.cs" />
     <Compile Include="Assets\scrip\RangoEnemigo2D.cs" />
     <Compile Include="Assets\scrip\camerascrip.cs" />
+    <Compile Include="Assets\puente.cs" />
     <Compile Include="Assets\scrip\Enemigo2D.cs" />
     <Compile Include="Assets\Rebote.cs" />
     <Compile Include="Assets\scrip\enemigo.cs" />
-    <Compile Include="Assets\HitJugador.cs" />
-    <Compile Include="Assets\puente.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

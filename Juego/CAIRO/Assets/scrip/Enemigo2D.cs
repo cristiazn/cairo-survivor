@@ -155,7 +155,7 @@ public class Enemigo2D : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Piso")
+        if (collision.gameObject.tag == "Caida")
         {
             Destroy(gameObject);
         }
